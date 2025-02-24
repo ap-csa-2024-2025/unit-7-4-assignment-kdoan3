@@ -9,11 +9,16 @@ public class Main
     ArrayList<String> input = new ArrayList<String>();
 
     String word = "";
+    System.out.println("Enter words. Enter \"Stop\" to stop.");
     while (!word.equals("STOP"))
     {
-      System.out.println("Implement me!");
+      word = sc.nextLine();
+      input.add(word);
     }
   }
+
+  input.remove(input.size()-1)'
+  System.out.println
 
   /** Returns the number of Strings in the ArrayList that has the letter
    * as the second letter in that word.
@@ -22,7 +27,18 @@ public class Main
    */
   public static int countSecondInitial(ArrayList<String> arr, String letter)
   {
-    return 0;
+    int count = 0;
+    for (String word : arr)
+    {
+      if (word != null && word.length >= 2)
+      {
+        if (word.substring(1,2).equals(letter))
+        {
+          count++;
+        }
+      }
+    }
+    return count;
   }
 
   /** Returns the index of the second occurrence of target within the ArrayList
@@ -31,6 +47,18 @@ public class Main
    */
   public static int searchSecond(final ArrayList<String> arr, String target)
   {
+    int count = 0;
+    for (int i = 0; i < arr.size(); i++)
+    {
+      if (word.equals(target))
+      {
+        count++;
+      }
+      if (count == 2)
+      {
+        return i;
+      }
+    }
     return -1;
   }
 }
